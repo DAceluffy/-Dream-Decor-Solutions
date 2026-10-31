@@ -1,0 +1,503 @@
+/* ==========================================================================
+   DREAM DECOR SOLUTIONS (DDS) — BESPOKE ARCHITECTURAL MASTER UI
+   Identity: Pure High-End Architectural Materials Brand
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+
+:root {
+  --dds-espresso-950: #0d0b0a;
+  --dds-espresso-900: #141110;
+  --dds-espresso-800: #1f1a18;
+  --dds-espresso-700: #2c2522;
+  --dds-walnut: #4a3528;
+  --dds-walnut-light: #705341;
+  
+  --dds-cream-50: #fbf9f6;
+  --dds-cream-100: #f5f0ea;
+  --dds-cream-200: #ebe3d9;
+  --dds-cream-300: #ded3c5;
+
+  --dds-gold-400: #e2ba6d;
+  --dds-gold-500: #cfa043;
+  --dds-gold-600: #a87e2b;
+  --dds-gold-glow: rgba(207, 160, 67, 0.35);
+
+  --dds-charcoal-900: #161514;
+  --dds-charcoal-800: #22201e;
+  --dds-charcoal-700: #33302c;
+
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Base Setup */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--dds-cream-50);
+  color: var(--dds-charcoal-900);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-serif);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: var(--dds-cream-100);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--dds-walnut);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dds-gold-500);
+}
+
+::selection {
+  background: var(--dds-walnut);
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   ARCHITECTURAL SLAT PATTERNS & BACKGROUND TEXTURES
+   ========================================================================== */
+.slat-pattern-subtle {
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(74, 53, 40, 0.03) 0px,
+    rgba(74, 53, 40, 0.03) 12px,
+    transparent 12px,
+    transparent 28px
+  );
+}
+
+.slat-pattern-dark {
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.02) 0px,
+    rgba(255, 255, 255, 0.02) 14px,
+    transparent 14px,
+    transparent 32px
+  );
+}
+
+/* Ambient Gold Glow Gradient */
+.gold-shimmer-text {
+  background: linear-gradient(135deg, #f7d78a 0%, #cfa043 50%, #946919 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ==========================================================================
+   BESPOKE CTA BUTTONS
+   ========================================================================== */
+.dds-btn-primary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.95rem 2rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2b1f18 0%, #16100d 100%);
+  border-radius: 14px;
+  border: 1px solid rgba(226, 186, 109, 0.35);
+  box-shadow: 0 12px 28px -6px rgba(22, 16, 13, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.dds-btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(226, 186, 109, 0.3), transparent);
+  transform: skewX(-25deg);
+  transition: all 0.6s ease;
+}
+
+.dds-btn-primary:hover::after {
+  left: 200%;
+}
+
+.dds-btn-primary:hover {
+  transform: translateY(-2px);
+  border-color: var(--dds-gold-400);
+  box-shadow: 0 16px 36px -6px rgba(207, 160, 67, 0.35);
+}
+
+.dds-btn-gold {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.95rem 2rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #141110;
+  background: linear-gradient(135deg, #e5bf73 0%, #cfa043 100%);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 24px -4px var(--dds-gold-glow);
+  transition: all 0.35s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.dds-btn-gold:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+  box-shadow: 0 16px 32px -4px rgba(207, 160, 67, 0.5);
+}
+
+.dds-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.9rem 1.8rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--dds-espresso-950);
+  background: #ffffff;
+  border: 1px solid var(--dds-cream-300);
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.dds-btn-outline:hover {
+  border-color: var(--dds-espresso-950);
+  background: var(--dds-espresso-950);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* WhatsApp Master Button */
+.dds-btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.85rem 1.6rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #ffffff;
+  background: linear-gradient(135deg, #1bd766 0%, #0d9f48 100%);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(13, 159, 72, 0.35);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.dds-btn-whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(13, 159, 72, 0.5);
+}
+
+/* ==========================================================================
+   INTERACTIVE SWATCH SELECTOR (HERO VISUALIZER)
+   ========================================================================= */
+.swatch-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(222, 211, 197, 0.8);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.swatch-pill.active {
+  border-color: var(--dds-walnut);
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(74, 53, 40, 0.15);
+  transform: scale(1.03);
+}
+
+.swatch-dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   COMPARISON MATRIX TABLE (DDS vs Natural Plywood vs Cheap PVC)
+   ========================================================================== */
+.matrix-row {
+  border-bottom: 1px solid var(--dds-cream-200);
+  transition: background 0.2s ease;
+}
+.matrix-row:hover {
+  background: rgba(245, 240, 234, 0.6);
+}
+
+/* ==========================================================================
+   BEFORE & AFTER INTERACTIVE SLIDER
+   ========================================================================== */
+.slider-stage {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: 0 24px 50px -12px rgba(22, 16, 13, 0.25);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: pan-y;
+}
+
+@media (min-width: 768px) {
+  .slider-stage {
+    height: 520px;
+  }
+}
+
+.slider-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.slider-overlay-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 2;
+  border-right: 3px solid #ffffff;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.slider-overlay-wrap .slider-img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}
+
+.slider-grab-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 48px;
+  transform: translateX(-50%);
+  z-index: 10;
+  cursor: ew-resize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grab-circle {
+  width: 46px;
+  height: 46px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dds-espresso-950);
+  font-size: 15px;
+  border: 2.5px solid var(--dds-walnut);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.slider-grab-handle:hover .grab-circle,
+.slider-grab-handle:active .grab-circle {
+  transform: scale(1.15);
+  background: var(--dds-walnut);
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   CONTINUOUS MARQUEE BAND
+   ========================================================================== */
+@keyframes ddsMarqueeAnim {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.dds-marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.dds-marquee-track {
+  display: inline-flex;
+  will-change: transform;
+  animation: ddsMarqueeAnim 26s linear infinite;
+}
+
+.dds-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* ==========================================================================
+   GLASS CARDS & DETAIL WRAPPERS
+   ========================================================================== */
+.dds-card-glass {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(222, 211, 197, 0.8);
+  border-radius: 20px;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dds-card-glass:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 24px 48px -12px rgba(74, 53, 40, 0.12);
+  border-color: rgba(207, 160, 67, 0.4);
+}
+
+.dds-card-dark {
+  background: linear-gradient(145deg, #1d1917 0%, #12100f 100%);
+  border: 1px solid rgba(226, 186, 109, 0.2);
+  border-radius: 20px;
+}
+
+/* ==========================================================================
+   APP-STYLE FLOATING BOTTOM DOCK (MOBILE EXCLUSIVITY)
+   ========================================================================== */
+.dds-mobile-dock {
+  position: fixed;
+  bottom: 16px;
+  left: 14px;
+  right: 14px;
+  z-index: 45;
+  background: rgba(18, 15, 14, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 8px 12px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+}
+
+.dds-dock-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  color: #b5aba1;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 6px 10px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.dds-dock-link i {
+  font-size: 16px;
+}
+
+.dds-dock-link.active,
+.dds-dock-link:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dds-dock-cta {
+  background: var(--dds-gold-500) !important;
+  color: #141110 !important;
+  font-weight: 700 !important;
+  padding: 7px 14px !important;
+  box-shadow: 0 4px 14px var(--dds-gold-glow);
+}
+
+/* Range Input */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background: var(--dds-cream-300);
+  border-radius: 9999px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--dds-walnut);
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(74, 53, 40, 0.4);
+  border: 3px solid #ffffff;
+  transition: transform 0.15s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  background: var(--dds-gold-500);
+}
+
+/* Modal Backdrops */
+.dds-modal {
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.dds-modal.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.dds-modal:not(.hidden) {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 86px;
+  }
+}

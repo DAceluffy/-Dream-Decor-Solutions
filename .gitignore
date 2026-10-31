@@ -1,0 +1,8 @@
+# Temporary scratch files
+*.ps1
+extract_all_pages.py
+parse_ocr.py
+clean_json.py
+all_pages_ocr.txt
+.DS_Store
+Thumbs.db
